@@ -23,8 +23,8 @@ int main(){
     if(decison[data[s]].size()!=0){
        for(auto it : decison[data[s]]){
          for(int i =-1; i<2; i++)
-           if(it+i<=data[n-1] && it+i>=data[0]) 
-            decison[it+i].insert(it+i);
+           if(it+i<=data[n-1] && it+i>=data[0] ) 
+            decison[data[s]+it+i].insert(it+i);
        }
     }
   }
