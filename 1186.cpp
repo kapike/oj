@@ -37,9 +37,9 @@ int main(){
       if(lastsmax <0 && t<0 && tmp2>=0){
         tmp2 = -9223372036854775807;
       }
-      thissmax = lastsmax>0 ? lastsmax+t : t;
-      thisf1 = mymax(tmp,thissmax,thissmax);
-      thisf2 = mymax(tmp, lastsmax,thissmax);
+      thissmax = lastsmax>0 ? tmp2 : t;
+      thisf2 = max(tmp, lastsmax);
+      thisf1 = max(thisf2,thissmax);
       if(thisf1 > maxres){
         maxres = thisf1;
       } 
