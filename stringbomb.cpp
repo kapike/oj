@@ -6,7 +6,8 @@ int main(){
   char third;
   int count = 0;
   while(scanf("%c",&first)!=EOF){
-    
+    if(first!= 'B' || first!='A')
+      continue;
     if(count == 0){
       count++;
     }else if(first == 'B'){
@@ -14,7 +15,7 @@ int main(){
     }else if(first == 'A'){
       count++;
     }
-    //printf("%c %d %d\n",first,first,count);
+    printf("%c %d %d\n",first,first,count);
   }
 
   printf("%d\n",count);
