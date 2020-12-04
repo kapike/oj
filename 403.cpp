@@ -17,14 +17,14 @@ int main(){
     data[i] = step;
     decison[step] = set<unsigned>(); 
   }
-  decison[data[1]].insert(1);
+  decison[data[0]].insert(0);
   
   for(int s = 0; s<n-1; s++){
     if(decison[data[s]].size()!=0){
        for(auto it : decison[data[s]]){
          for(int i =-1; i<2; i++)
-           if(it+i<=data[n-1] && it+i>=data[0]) 
-            decison[it+i].insert(it+i);
+           if(it+i<=data[n-1] && it+i>=data[0] &&it+i>0 ) 
+            decison[data[s]+it+i].insert(it+i);
        }
     }
   }
